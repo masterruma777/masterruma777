@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Thanh toán</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-white" onload="loadinthanhtoan()">
+    <div class="offcanvas offcanvas-end" id="menu" data-bs-scroll="true">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Menu</h1>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-2  h-100  w-100 text-center ">
+                <a href="gioithieu.html" class="blink">Giới thiệu</a>
+                <a href="lienhe.html" class="blink">Liên hệ</a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle blink" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Danh mục</a>
+                    <div class="dropdown-menu w-100 " aria-labelledby="dropdownId">
+                        <a class="dropdown-item " href="traicay.html">Trái cây</a>
+                        <a class="dropdown-item " href="raucu.html">Rau củ</a>
+                        <a class="dropdown-item " href="tpcb.html">Thực phẩm chế biến</a>
+                    </div>
+                </div>
+
+                <div class="input-group mt-auto">
+                    <input type="text" class="form-control" aria-describedby="searchbtn">
+                    <button class="btn btn-outline-success " type="button" id="searchbtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid justify-content-end p-1 ps-3  fixed-top "
+        style="background-color: rgba(247, 255, 12, 0);pointer-events: none">
+        <div class="container-fluid d-flex justify-content-between pt-2 "
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <a href="index.html"><img src="img/grass.png" class="logo" alt="" width="60px" height="60px"></a>
+            <div class="d-flex gap-2  ">
+                <a class="  h-50 align-self-center z-3 " style="margin-right: 10px;" data-bs-toggle="offcanvas"
+                    data-bs-target="#menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="32" height="32" fill="currentColor"
+                        class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0M2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid   d-block ps-2 h-auto  " id="thanhtoan">
+        <div class="container border-2 mt-4   p-5 rounded-4 " id="thanhtoan">
+            <form class="needs-validation " id="formthanhtoan" novalidate>
+                <div class="form-floating mb-3 mt-3 ">
+                    <input type="text" class="form-control" id="name" placeholder="Nhập tên" name="name" required>
+                    <label for="name">Tên</label>
+                    <div class="invalid-feedback text-start fw-bolder " id="error_name">
+                    </div>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="email" placeholder="Nhập email" name="email" required>
+                    <label for="email">Email</label>
+                    <div class="invalid-feedback text-start fw-bolder ">
+                        Xin hãy nhập email.
+                    </div>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="tel" class="form-control " id="sdt" placeholder="Nhập số diện thoại" name="sdt"
+                        required>
+                    <label for="sdt">Số điện thoại</label>
+                    <div class="invalid-feedback text-start fw-bolder ">
+                        Xin hãy nhập số điện thoại.
+                    </div>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control " id="diachi" placeholder="Nhập địa chỉ" name="diachi"
+                        required>
+                    <label for="diachi">Địa chỉ</label>
+                    <div class="invalid-feedback text-start fw-bolder ">
+                        Xin hãy nhập địa chỉ.
+                    </div>
+                </div>
+                <div class="container-fluid mt-3">
+                    <input type="text" name="gia" id="gia"  hidden>
+                    <textarea name="sanpham" id="sanpham" hidden></textarea>
+                    <h1 class="text-center">Sản phẩm</h1>
+                    <div class="container-fluid">
+                        <div class="d-flex flex-column gap-2  h-100  w-100 text-center ">
+                            <ul class="listCard">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <h1 class="h1">Tổng giá trị: <span class="total"> </span> VNĐ </h1> 
+                </div>
+                <div class="d-flex justify-content-center gap-3 mt-5 ">
+                    <button type="submit" class="btn btn-primary formbtn " id="dat">Đặt</button>
+                    <button type="reset" class="btn btn-danger  formbtn ">Làm lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid bg-black mb-0 ps-3 pt-4  " id="footer">
+        <div class="row row-cols-3 text-white  ">
+            <div class="col mb-2 ">
+                <P class="h4 text-center ">LIÊN HỆ</P>
+                <p>Địa chỉ: Đường Lê Lai, Phường Phạm Ngũ Lão
+                    Quận 1
+                    Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Số điện thoại: 0123456789</p>
+                <p>Email: farmhouse.com</p>
+                <div class="d-flex gap-3   ">
+                    <a href="https://www.facebook.com/"><img src="img/facebook-round-color-icon.png" id="facebook"
+                            alt="" width="32px" height="32px"></a>
+                    <a href="https://www.instagram.com/"><img src="img/inicon.png" id="instagram" alt="" width="32px"
+                            height="32px"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youicon.png" alt="" id="youtube" width="32px"
+                            height="32px"></a>
+                </div>
+            </div>
+            <div class="col border-start ">
+                <P class="h4 text-center">Hỏi đáp</P>
+                <div class="d-flex flex-column gap-3  ">
+                    <a href="lienhe.html" class=" link-underline link-underline-opacity-0">Tôi đã đặt thì khi nào sẽ
+                        nhận?</a>
+                    <a href="lienhe.html" class=" link-underline link-underline-opacity-0">Tôi muốn thay đổi thông tin
+                        về đơn hàng của mình.</a>
+                </div>
+            </div>
+            <div class="col border-start ">
+                <P class="h4 text-center">Danh mục</P>
+                <div class="d-flex flex-column gap-1 fs-2 text-center ">
+                    <a class="link-success link-underline link-underline-opacity-0" href="raucu.html">Rau củ</a>
+                    <a class="link-success link-underline link-underline-opacity-0 " href="traicay.html">Trái cây</a>
+                    <a class="link-success link-underline link-underline-opacity-0" href="tpcb.html">Thực phẩm chế biến
+                        hồng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="lienheModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="lienheModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div class="modal-header bg-success ">
+                    <h5 class="modal-title" id="lienheModalLabel">Thành công</h5>
+                </div>
+                <div class="modal-body ">
+                    Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success  " id="ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ConfModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ConfModalLabel">Xác nhận</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có muốn xem lại thông tin không ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay về</button>
+                    <button type="button" class="btn btn-primary" id="modaldat">Đặt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="hoanthanhModal" tabindex="-1" data-bs-backdrop="static"
+        aria-labelledby="hoanthanhModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div class="modal-header bg-success ">
+                    <h5 class="modal-title" id="hoanthanhModalLabel">Thành công</h5>
+                </div>
+                <div class="modal-body ">
+                    Đơn hàng đã được đặt thành công.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success  " id="hoanthanh">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/vohang.js"></script>
+    <script>
+        $(document).ready(function () {
+            function sendMail() {
+                emailjs.init({
+                    publicKey: "YSYzyruooMJtvamuY",
+                });
+                emailjs.sendForm('service_k3ylnbw', 'template_bmc1d58', document.getElementById('formthanhtoan')).then(
+                    (response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        location.reload();
+                    },
+                    (error) => {
+                        console.log('FAILED...', error);
+                    },
+                );
+            }
+            jQuery.validator.addMethod("lettersonly", function (value, element) {
+                return this.optional(element) || /^[a-z\s]+$/i.test(value);
+            }, "Không thể có số");
+            $('.needs-validation').validate({
+                rules: {
+                    'name': {
+                        minlength: 1,
+                        lettersonly: true
+                    },
+                    'email': {
+                        email: true
+                    },
+                    'sdt': {
+                        minlength: 10,
+                        maxlength: 10,
+                        digits: true
+                    },
+                    'diachi': {
+                        required: true
+                    }
+                },
+                messages: {
+                    'name': {
+                        required: "Xin hãy nhập tên.",
+                        minlength: "Xin hãy nhập hơn {0} ký tự",
+                    },
+
+                },
+                highlight: function (input) {
+                    $(input).removeClass('is-valid');
+                    $(input).addClass('is-invalid');
+                },
+                unhighlight: function (input) {
+                    $(input).removeClass('is-invalid');
+                    $(input).addClass('is-valid');
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("name") == 'name') {
+                        error.appendTo("#error_name");
+                    }
+                },
+                submitHandler: function (form) {
+                    $("#ConfModal").modal('show');
+                    $('#modaldat').click(function () {
+                        $("#hoanthanhModal").modal('show');
+                        $("#ConfModal").modal('hide');
+                        sendMail();
+                    });
+                    $('#hoanthanh').click(function () {
+                        localStorage.clear();
+                        $('#hoanthanh').addClass('disabled');
+                        window.location.replace("index.html");
+                    });
+                }
+            });
+        });
+    </script>
+     <script src="js/vohang.js"></script>
+
+</body>
+
+</html>

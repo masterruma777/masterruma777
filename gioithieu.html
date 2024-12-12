@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Giới thiệu</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadin()" class="gioithieu">
+
+    <div class="offcanvas offcanvas-end" id="menu" data-bs-scroll="true">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Menu</h1>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-2  h-100  w-100 text-center ">
+                <a href="gioithieu.html" class="blink">Giới thiệu</a>
+                <a href="lienhe.html" class="blink">Liên hệ</a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle blink" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Danh mục</a>
+                    <div class="dropdown-menu w-100 " aria-labelledby="dropdownId">
+                        <a class="dropdown-item " href="traicay.html">Trái cây</a>
+                        <a class="dropdown-item " href="raucu.html">Rau củ</a>
+                        <a class="dropdown-item " href="tpcb.html">Thực phẩm chế biến</a>
+                    </div>
+                </div>
+
+                <div class="input-group mt-auto">
+                    <input type="text" class="form-control" aria-describedby="searchbtn">
+                    <button class="btn btn-outline-success " type="button" id="searchbtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" id="cart" data-bs-scroll="true">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Cart</h1>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-2  h-100  w-100 text-center ">
+                <ul class="listCard">
+
+                </ul>
+                <div class="input-group mt-auto">
+                    <div class="total mb-2 " style="font-size: 1.3em; word-spacing: 3px;">0</div>
+                    <a href="thanhtoan.html" class="btn mb-3  w-100 btn-outline-success  align-middle btnthanhtoan disabled">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid justify-content-end p-1 ps-3  fixed-top "
+        style="background-color: rgba(247, 255, 12, 0);pointer-events: none">
+        <div class="container-fluid d-flex justify-content-between pt-2 "
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <a href="index.html"><img src="img/grass.png" class="logo" alt="" width="60px" height="60px"></a>
+            <div class="d-flex gap-4  " >
+                <div class="d-flex justify-content-center">
+                    <a class="  h-50 align-self-center z-3 "  data-bs-toggle="offcanvas"
+                    data-bs-target="#cart">
+                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="logo" width="32px" height="32px"
+                        viewBox="0 0 902.86 902.86" xml:space="preserve">
+                        <path
+                            d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z M685.766,247.188l-67.077,262.64H131.199L81.928,246.756L685.766,247.188z">
+                        </path>
+                        <path
+                            d="M578.418,825.641c59.961,0,108.743-48.783,108.743-108.744s-48.782-108.742-108.743-108.742H168.717 c-59.961,0-108.744,48.781-108.744,108.742s48.782,108.744,108.744,108.744c59.962,0,108.743-48.783,108.743-108.744 c0-14.4-2.821-28.152-7.927-40.742h208.069c-5.107,12.59-7.928,26.342-7.928,40.742 C469.675,776.858,518.457,825.641,578.418,825.641z M209.46,716.897c0,22.467-18.277,40.744-40.743,40.744 c-22.466,0-40.744-18.277-40.744-40.744c0-22.465,18.277-40.742,40.744-40.742C191.183,676.155,209.46,694.432,209.46,716.897z M619.162,716.897c0,22.467-18.277,40.744-40.743,40.744s-40.743-18.277-40.743-40.744c0-22.465,18.277-40.742,40.743-40.742 S619.162,694.432,619.162,716.897z">
+                        </path>
+                    </svg>
+                </a>
+                <span class="w-25 h-25  p-2 bg-danger border border-light rounded-circle quantity d-none"></span>
+                </div>
+                <a class="  align-self-center z-3 " style="margin-right: 10px;" data-bs-toggle="offcanvas"
+                    data-bs-target="#menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="32" height="32" fill="currentColor"
+                        class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0M2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div id="home_banner_gioithieu" class="container-fluid ">
+        <div id="home_banner_text">
+        </div>
+    </div>
+    <div class="container-fluid p-5">
+        <div id="phangioithieu">
+            <h1>Cửa Hàng Chúng Tôi Xin Kính Chào Quý Khách</h1>
+            <h4><i>I.Giới Thiệu</i></h4>
+            <p>Chào mừng bạn đến với cửa hàng chúng tôi, điểm đến lý tưởng cho mọi nhu cầu mua thực phẩm của bạn. Tại
+                cửa
+                hàng chúng tôi, chúng tôi tự hào cung cấp một số sản phẩm mà bạn mong muốn, từ những thực phẩm bán chạy
+                đến
+                những thực phầm bán chạy và ngon nhất, tất cả đều được chọn lọc kỹ lưỡng để đảm bảo chất lượng và an
+                toàn.
+                Mỗi sản phẩm của chúng tôi bán với sự chăm chút tỉ mỉ, nhằm mang đến cho bạn trải nghiệm mua sắm trực
+                tuyến
+                không chỉ tiện lợi mà còn an toàn cho sức khỏe. Hãy khám phá và tận hưởng niềm vui mua thực phẩm mà bạn
+                muốn
+                với cửa hàng chúng tôi. Hy vọng đoạn giới thiệu này sẽ thu hút khách hàng và phản ánh đúng tinh thần của
+                thương hiệu bạn. Nếu bạn cần thêm sự chỉnh sửa hoặc muốn tôi thêm thông tin cụ thể, xin vui lòng cho tôi
+                biết!</p>
+
+        </div>
+        <div id="phanmucdich" class="d-flex flex-column flex-lg-row mb-3">
+            <div class="phanmucdich1 w-100">
+                <h4><i>II.Mục Đích</i></h4>
+                <p>Thực phẩm xanh – sạch – ngon vẫn luôn là những tiêu chí hàng đầu giúp người tiêu dùng chọn lựa thực
+                    phẩm
+                    mỗi ngày. Thế nhưng khoảng thời gian gần đây lại có rất nhiều thương lái lợi dụng lòng tin của người
+                    tiêu dùng tráo các thực phẩm bẩn, kém chất lượng gây ảnh hưởng nghiêm trọng đến sức khỏe của mọi
+                    người.
+                    Đặc biệt với thị trường trái cây nhập khẩu thì tình trạng này lại tràn lan gây hoang mang cho người
+                    tiêu
+                    dùng. Nhận thấy những điều này, chúng tôi đã cho ra đời trang web bán đồ ăn với sứ mệnh mang đến sức
+                    khỏe cho mọi nhà qua những loại trái cây ngoại nhập thượng hạng, chất lượng với tiêu chuẩn 3C: CHUẨN
+                    TƯƠI – CHUẨN NGON – CHUẨN SẠCH.</p>
+            </div>
+            <div class="phanmucdichimg d-flex justify-content-center ">
+                <img src="img/kiem-rau-cu-qua-1.png" class="" width="100%">
+            </div>
+        </div>
+        <div id="phanlamviec d-flex ">
+            <h4><i>III.Cách Làm Việc Của Chúng Tôi</i></h4>
+
+            <div class="container d-flex flex-column ">
+                <div class="d-flex flex-column">
+                    <div class="text-center">
+                        <h5>1.Tìm Kiếm Và Lựa chọn Sản Phẩm:</h5>Chúng tôi luôn tìm kiếm những nguồn cung cấp uy tín và
+                        chất
+                        lượng cao để đảm bảo rằng đều đạt chuẩn và an toàn.
+                    </div>
+
+                    <img src="img/077931d29bfc10af2a246d30f51907d7.jpg" class="mx-auto" width="70%" height="300px">
+                </div>
+                <div class="container mt-4 d-flex flex-column text-center">
+                    <div>
+                        <h5>2.Sản phẩm tươi mới hàng ngày:</h5>Chúng tôi cập nhật hàng hóa mỗi ngày để đảm bảo rằng bạn
+                        luôn
+                        có cơ hội trải nghiệm những sản phẩm tươi mới nhất.
+                    </div>
+                    <img src="img/istockphoto-589415708-612x612.jpg" class="mx-auto" width="70%" height="300px">
+                </div>
+                <div class="container mt-4 d-flex flex-column text-center">
+                    <div>
+                        <h5>3.Đa dạng và phong phú:</h5>Từ rau củ, thực phẩm đông lạnh đến thực phẩm tươi sống, chúng
+                        tôi
+                        cung cấp một loạt các sản phẩm phong phú
+                    </div>
+                    <img src="img/cpfoods-cach_bao_quan_rau_cu-20-7-2023_7db7edb13766461dbe8a4ef7eb123d36.jpg"
+                    class="mx-auto" width="70%" height="250px">
+                </div>
+                <div class="container mt-4 d-flex flex-column text-center">
+                    <div>
+                        <h5>4.Chất lượng hàng đầu:</h5>Chúng tôi cam kết chỉ cung cấp những sản phẩm có chất lượng cao
+                        nhất.
+                        Mỗi sản phẩm đều được kiểm tra kỹ lưỡng trước khi chúng tôi đưa lên cửa hàng
+                    </div>
+                    <img src="img/buoi-xuat-khau-1683363032462888245960.webp" class="mx-auto" width="70%" height="300px">
+                </div>
+                <div class="container mt-4 d-flex flex-column text-center">
+                    <div>
+                        <h5>5.Dịch vụ chăm sóc khách hàng tận tâm: </h5>Đội ngũ nhân viên của chúng tôi luôn sẵn lòng hỗ
+                        trợ
+                        bạn trong mọi vấn đề, từ việc chọn lựa sản phẩm đến việc giao hàng.
+                    </div>
+                    <img src="img/bang-cau-hoi-cham-soc-khach-hang-3.jpg" class="mx-auto" width="70%" height="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+     <div class="container-fluid bg-black mb-0 ps-3 pt-4  " id="footer">
+        <div class="row row-cols-3 text-white  ">
+            <div class="col mb-2 ">
+                <P class="h4 text-center ">LIÊN HỆ</P>
+                <p>Địa chỉ: Đường Lê Lai, Phường Phạm Ngũ Lão
+                    Quận 1
+                    Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Số điện thoại: 0123456789</p>
+                <p>Email: farmhouse.com</p>
+                <div class="d-flex gap-3   ">
+                    <a href="https://www.facebook.com/"><img src="img/facebook-round-color-icon.png" id="facebook"
+                            alt="" width="32px" height="32px"></a>
+                    <a href="https://www.instagram.com/"><img src="img/inicon.png" id="instagram" alt="" width="32px"
+                            height="32px"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youicon.png" alt="" id="youtube" width="32px"
+                            height="32px"></a>
+                </div>
+            </div>
+            <div class="col border-start ">
+                <P class="h4 text-center">Hỏi đáp</P>
+                <div class="d-flex flex-column gap-3  ">
+                    <a href="lienhe.html" class=" link-underline link-underline-opacity-0">Tôi đã đặt thì khi nào sẽ nhận?</a>
+                    <a href="lienhe.html" class=" link-underline link-underline-opacity-0">Tôi muốn thay đổi thông tin
+                        về đơn hàng của mình.</a>
+                </div>
+            </div>
+            <div class="col border-start ">
+                <P class="h4 text-center">Danh mục</P>
+                <div class="d-flex flex-column gap-1 fs-2 text-center ">
+                    <a class="link-success link-underline link-underline-opacity-0" href="raucu.html">Rau củ</a>
+                    <a class="link-success link-underline link-underline-opacity-0 " href="traicay.html">Trái cây</a>
+                    <a class="link-success link-underline link-underline-opacity-0" href="tpcb.html">Thực phẩm chế biến
+                        hồng</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/vohang.js"></script>
+
+</body>
+
+</html>

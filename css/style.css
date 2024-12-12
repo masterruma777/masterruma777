@@ -1,0 +1,325 @@
+body {
+  background-color: rgb(17, 117, 84);
+}
+
+.offcanvas-body .blink {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: black;
+  transition: color 1s ease-out;
+  font-family: "Arial", sans-serif;
+}
+
+.offcanvas-body .blink:hover {
+  font-weight: bold;
+  color: rgb(26, 170, 16);
+  transition: color 1s ease-out;
+}
+
+.logo {
+  transition: 1s;
+  filter: invert(45%) sepia(84%) saturate(1672%) hue-rotate(161deg) brightness(94%) contrast(101%);
+  pointer-events: initial;
+}
+
+.logo:hover {
+  filter:  invert(20%) sepia(93%) saturate(2784%) hue-rotate(351deg) brightness(91%) contrast(93%);
+  cursor: pointer;
+  transition: 1s;
+}
+#home_banner_raucu{
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.84)), url("../img/vegtex.png");
+  background-repeat: repeat-x;
+  animation: marquee1 60s infinite linear;
+}
+#home_banner_traicay{
+  height: 330px;
+  background: linear-gradient(rgba(0, 0, 0, 0.264), rgba(0, 0, 0, 0.358)), url("../img/fruittex.png");
+  background-repeat: repeat-x;
+  animation: marquee1 60s infinite linear;
+}
+#home_banner_tpcb{
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.166), rgba(0, 0, 0, 0.505)), url("../img/tpcbtex.jpg");
+  background-repeat: repeat-x;
+  animation: marquee1 60s infinite linear;
+}
+#home_banner {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.84)), url("../img/green-grass-768x768_jpg-Dec-06-2023-05-24-23-3646-PM.webp");
+  background-repeat: repeat-x;
+  animation: marquee 60s infinite linear;
+
+}
+#home_banner_gioithieu{
+  background: linear-gradient(rgba(0, 0, 0, 0.395), rgba(0, 0, 0, 0.553)), url("../img/featured-image-vegetable-garden.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 400px;
+}
+#home_banner_text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#caterory {
+  margin-top: 20px;
+  padding: 0;
+}
+
+#fruit {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.632)), url("../img/Rainbow-Fruit-Salad-1024-500x500.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  pointer-events: none;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 5px 10px 8px #0a0707;
+}
+
+#fruit:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/Rainbow-Fruit-Salad-1024-500x500.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: background-color 1000ms linear;
+}
+
+#vegetable {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.632)), url("../img/077931d29bfc10af2a246d30f51907d7.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  pointer-events: none;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 5px 10px 8px #0a0707;
+}
+
+#vegetable:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/077931d29bfc10af2a246d30f51907d7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#processfood {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.632)), url("../img/1-18-1024x1024.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  pointer-events: none;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 5px 10px 8px #0a0707;
+}
+
+#processfood:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/1-18-1024x1024.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#caterory a {
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 2em;
+  color: rgb(26, 170, 16);
+  font-weight: bolder;
+  font-family: monospace;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1px #000000;
+  pointer-events: auto;
+}
+.carimg{
+  height: 80vh;
+  filter: brightness(50%)
+}
+.carousel-item{
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))
+}
+/*-------phan gioi thieu-------*/
+.gioithieu{
+  background: white;
+}
+
+
+
+#phangioithieu h1{
+  text-align: center;
+  color: rgb(29, 245, 29);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #46fa2ade;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Style for paragraphs */
+p {
+  font-family: Arial, sans-serif;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/*---------phần tin tức---------------*/
+#ttdau{
+  text-align: center;
+  color: rgb(174, 11, 11);
+}
+.tintuc1{
+ background-image: linear-gradient(to right ,rgb(242,112,156),rgb(255,148,114));
+}
+#tintuc1-1 h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+#tintuc1-1{
+  display: flex;
+}
+
+
+.tt1 h5{
+  color:  rgb(174, 11, 11);
+}
+
+.tt2 h5{
+  color: rgb(35, 54, 231);
+}
+.tt2 .card-title{
+  margin-left: 10%;
+}
+.tt2-1{
+  display: flex;
+}
+.tt2-2{
+  display: flex;
+}
+.tt2-3{
+  display: flex;
+}
+.tt1 img{
+ margin-left: 0%;
+}
+#ttdau1{
+  text-align: center;
+  color: rgb(15, 54, 228);
+}
+.tintuc2{
+ background-image: linear-gradient(109.6deg,rgba(156,252,248,1)11.2%,rgba(110,123,251,1)91.1%);
+}
+.tt1 p{
+  color: black;
+}
+.tt2 .tt0{
+  margin-left: 5%;
+}
+
+#home_banner_lienhe {
+  background: linear-gradient(rgba(0, 0, 0, 0.908), rgba(0, 0, 0, 0.84)), url("../img/Farmer.jpg")no-repeat;
+
+  background-size: 100%;
+  height: 50vh;
+}
+
+.formbtn {
+  width: 25%;
+}
+
+#lienhe {
+  background-color: aliceblue;
+}
+.listCard li{
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #000000;
+  row-gap: 10px;
+}
+.listCard li div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listCard li img{
+  width: 90%;
+}
+.listCard li button{
+  background-color: #fff5;
+  border: none;
+}
+.listCard .count{
+  margin: 0 10px;
+}
+
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -1190px;
+  }
+}
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+@keyframes marquee1 {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position-x: 1190px;
+  }
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@media screen and (max-width: 576px) {
+  #home_banner {
+    height: 200px;
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+  #caterory a {
+    padding: 20px;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 760px) {}
